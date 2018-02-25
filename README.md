@@ -21,7 +21,7 @@
 git status       #查看当前文件index.php被修改
 git add .        #添加到本地索引
 git commit -m "fix bug"   #提交到本地仓库
-git push         #提交到远程仓库这里push会输入我的git的账号和密码我会邮件发送给您
+git push         #提交到远程仓库这里push会输入我的git push的账号和密码我会在nodes上写给您
 ```
 # 观察效果
 
@@ -30,6 +30,6 @@ git push         #提交到远程仓库这里push会输入我的git的账号
 
 # 总结
 
-> 如果您能顺利完成这个实验，那么说明我背后的Kubernetes，Docker，Jenkins在为你服务。其实Kubernetes平台远远不止这个特性（如果您了解的话）。我会把平台搭建的ansible脚本和这个Demo的jenkins脚本发送到您的提交地址。
+> 如果您能顺利完成这个实验，那么说明我的Kubernetes，Docker，Jenkins在为您服务。其实Kubernetes平台远远不止这个特性。我会把平台搭建的ansible脚本和这个Demo的jenkins脚本发送到您的提交地址。
 
 

@@ -16,7 +16,7 @@ $contacts = $db->all();
 
 <html>
 <head>
-    <title>Data-President Sample Demo</title>
+    <title>ThoughtWork Sample Demo</title>
 
     <link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 
@@ -48,7 +48,7 @@ $contacts = $db->all();
 <div class="container">
     <div class="content">
         <h1>
-            DevOps_HomeWork Sample Dem123123123123123123123123123123123123o
+            DevOps_HomeWork Sample Dem12323124124141241421553314221bugo
         </h1>
         <table class="table">
             <caption>Contact List New</caption>

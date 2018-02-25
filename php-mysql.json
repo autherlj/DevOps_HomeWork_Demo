@@ -1,0 +1,67 @@
+{
+  "id": "/cicd-demo/phpmysql",
+  "instances": 1,
+  "cpus": 0.1,
+  "mem": 128,
+  "disk": 0,
+  "gpus": 0,
+  "constraints": [],
+  "fetch": [],
+  "storeUrls": [],
+  "backoffSeconds": 1,
+  "backoffFactor": 1.15,
+  "maxLaunchDelaySeconds": 3600,
+  "container": {
+    "type": "DOCKER",
+    "volumes": [],
+    "docker": {
+      "image": "gitlab.nlabs.sg:4567/liangjun/php-mysql",
+      "network": "BRIDGE",
+      "portMappings": [
+        {
+          "containerPort": 80,
+          "hostPort": 0,
+          "servicePort": 10109,
+          "protocol": "tcp",
+          "name": "phpmysql"
+        }
+      ],
+      "privileged": false,
+      "parameters": [],
+      "forcePullImage": false
+    }
+  },
+  "healthChecks": [
+    {
+      "gracePeriodSeconds": 300,
+      "intervalSeconds": 60,
+      "timeoutSeconds": 20,
+      "maxConsecutiveFailures": 3,
+      "portIndex": 0,
+      "protocol": "MESOS_HTTP",
+      "delaySeconds": 15
+    }
+  ],
+  "readinessChecks": [],
+  "dependencies": [],
+  "upgradeStrategy": {
+    "minimumHealthCapacity": 1,
+    "maximumOverCapacity": 1
+  },
+  "unreachableStrategy": {
+    "inactiveAfterSeconds": 300,
+    "expungeAfterSeconds": 600
+  },
+  "killSelection": "YOUNGEST_FIRST",
+  "requirePorts": false,
+  "labels": {
+    "HAPROXY_GROUP": "external",
+    "HAPROXY_0_VHOST": "phpmysql.dcos.nlabs.sg"
+  },
+  "env": {
+    "MYSQL_PORT_3306_TCP_ADDR": "cicd-demomysql.marathon.l4lb.thisdcos.directory:3306",
+    "MYSQL_USERNAME": "root",
+    "MYSQL_PASSWORD": "root",
+    "MYSQL_INSTANCE_NAME": "homestead"
+  }
+}

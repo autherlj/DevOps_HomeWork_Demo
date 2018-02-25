@@ -15,7 +15,7 @@
     "type": "DOCKER",
     "volumes": [],
     "docker": {
-      "image": "gitlab.nlabs.sg:4567/liangjun/php-mysql",
+      "image": "autherlj/devopshomework",
       "network": "BRIDGE",
       "portMappings": [
         {
@@ -55,8 +55,8 @@
   "killSelection": "YOUNGEST_FIRST",
   "requirePorts": false,
   "labels": {
-    "HAPROXY_GROUP": "external",
-    "HAPROXY_0_VHOST": "phpmysql.dcos.nlabs.sg"
+    "traefik.enable": "true",
+    "traefik.frontend.rule": "Host:phpmysql.dcos.nlabs.sg"	  
   },
   "env": {
     "MYSQL_PORT_3306_TCP_ADDR": "cicd-demomysql.marathon.l4lb.thisdcos.directory:3306",

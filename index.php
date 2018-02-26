@@ -48,7 +48,7 @@ $contacts = $db->all();
 <div class="container">
     <div class="content">
         <h1>
-            DevOps_HomeWork Sample Dem12323124124141241421553314221bugo
+            DevOps_HomeWork Sample Demo
         </h1>
         <table class="table">
             <caption>Contact List New</caption>

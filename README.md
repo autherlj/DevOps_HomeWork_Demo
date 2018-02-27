@@ -31,12 +31,12 @@ git push         #提交到远程仓库这里push会输入我的git push的�
 # 总结
 
 > 如果您能顺利完成这个实验，那么说明我的Kubernetes，Docker，Jenkins在为您服务。其实Kubernetes平台远远不止这个特性。我们看看后端发生了什么事情:
-
+```
 1.用户向GitHub提交代码
 2.将代码提交到远程我的仓库
 3.Jenkins 配置的SCM 是每分钟trigger我们gitHUB项目
 4.Jenkinsfile定义了三个阶段，第一个阶段是“Build”,这个阶段是根据给定的Dockerfile创建一个镜像，第二个阶段“Push”,把生成的镜像push到我们的镜像仓库中，最后一个阶段是”Deploy”，编辑了一下deployment.yaml模板，然后调用kubectl命令进行部署。
-
+```
 
 我会把平台搭建的ansible脚本和这个Demo的jenkins脚本发送到您的提交地址。
 

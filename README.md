@@ -21,7 +21,7 @@
 git status       #查看当前文件index.php被修改
 git add .        #添加到本地索引
 git commit -m "fix bug"   #提交到本地仓库
-git push         #提交到远程仓库这里push会输入我的git push的账号和密码我会在nodes上写给您
+git push         #提交到远程仓库这里push会输入我的git push的账号（Autherlj）和密码我会在nodes上写给您
 ```
 # 观察效果
 

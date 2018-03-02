@@ -48,7 +48,7 @@ $contacts = $db->all();
 <div class="container">
     <div class="content">
         <h1>
-            DevOps_HomeWork Sample messyCode[12323123123123213124577381(^$@@724&%%@((1 Demo
+            DevOps_HomeWork Sample Demo
         </h1>
         <table class="table">
             <caption>Contact List New</caption>

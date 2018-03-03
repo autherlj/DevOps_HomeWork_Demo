@@ -21,6 +21,6 @@ node {
 
     stage "Deploy"
 
-        sh "sed 's#autherlj/devopshomework#'$BUILDIMG'#' php-mysql.yaml | kubectl apply -f -"
-        sh "kubectl rollout status deployment/php-mysql"
+        sh "sed 's#autherlj/mytest#'$BUILDIMG'#' php-mysql.yaml | kubectl apply -f -"
+        sh "kubectl rollout status deployment/php-mysql -n uat"
 }

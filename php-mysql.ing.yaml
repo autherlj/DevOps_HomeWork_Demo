@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: php-mysql-web-ui
+  namespace: uat
+spec:
+  rules:
+  - host: cicddemo.thoughtwork.test.io
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: php-mysql
+          servicePort: 8080

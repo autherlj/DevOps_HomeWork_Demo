@@ -12,7 +12,7 @@ node {
     env.BUILDIMG=imageName
 
     stage "Build"
-    
+        sh 'docker login -u autherlj -p ncslj013817'
         sh "docker build -t ${imageName} -f Dockerfile ."
     
     stage "Push"

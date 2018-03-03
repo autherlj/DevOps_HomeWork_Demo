@@ -7,8 +7,9 @@ node {
     sh "git rev-parse --short HEAD > commit-id"
 
     tag = readFile('commit-id').replace("\n", "").replace("\r", "")
-    registryHost = "autherlj/devopshomework"
-    imageName = "${registryHost}:${tag}"
+    appName = "devopshomework"
+    registryHost = "autherlj/"
+    imageName = "${registryHost}${appName}:${tag}"
     env.BUILDIMG=imageName
 
     stage "Build"

@@ -8,7 +8,7 @@ node {
 
     tag = readFile('commit-id').replace("\n", "").replace("\r", "")
     appName = "devopshomework"
-    registryHost = "autherlj/mytest"
+    registryHost = "autherlj/mytest:"
     imageName = "${registryHost}${appName}:${tag}"
     env.BUILDIMG=imageName
 

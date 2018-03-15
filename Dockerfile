@@ -6,4 +6,4 @@ FROM daocloud.io/php:5.6-apache
 RUN docker-php-ext-install pdo_mysql
 
 # /var/www/html/ 为 Apache 目录
-COPY . /var/www/html/cicd-demo-web
+COPY . /var/www/html/cicd-demo-web/

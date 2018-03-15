@@ -1,26 +1,30 @@
-node {
-
-    checkout scm
-
-    env.DOCKER_API_VERSION="1.26"
-    
-    sh "git rev-parse --short HEAD > commit-id"
-
-    tag = readFile('commit-id').replace("\n", "").replace("\r", "")
-    registryHost = "autherlj/mytest"
-    imageName = "${registryHost}:${tag}"
-    env.BUILDIMG=imageName
-
-    stage "Build"
-        sh 'docker login -u autherlj -p ncslj013817'
-        sh "docker build -t ${imageName} -f Dockerfile ."
-    
-    stage "Push"
-
-        sh "docker push ${imageName}"
-
-    stage "Deploy"
-
-        sh "sed 's#autherlj/mytest#'$BUILDIMG'#' php-mysql.yaml | kubectl apply -f -"
-        sh "kubectl rollout status deployment/php-mysql -n uat"
+node{
+              currentBuild.result = "SUCCESS"  
+    try{
+           stage ('CheckoutCode'){
+                checkout scm
+                env.DOCKER_API_VERSION="1.35"
+                sh "git rev-parse --short HEAD > commit-id"
+                tag = readFile('commit-id').replace("\n", "").replace("\r", "")
+                registryHost = "autherlj/mytest"
+                imageName = "${registryHost}:${tag}"
+                env.BUILDIMG=imageName       
+           }
+           stage ('BuildDockerImage'){
+                sh 'docker login -u autherlj -p ncslj013817'
+                sh "docker build -t ${imageName} -f Dockerfile ." 
+           }
+           stage ('Push'){
+                sh "docker push ${imageName}"
+           }
+           stage('DeploytoK8s'){
+                sh "sed 's#autherlj/mytest#'$BUILDIMG'#' php-mysql.yaml | kubectl apply -f -"
+                sh "kubectl rollout status deployment/php-mysql -n cicd"
+           }
+      
+       }catch(error)
+       {
+              currentBuild.result = "FAILURE"
+              throw error       
+       }  
 }

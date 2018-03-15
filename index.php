@@ -48,15 +48,15 @@ $contacts = $db->all();
 <div class="container">
     <div class="content">
         <h1>
-            DevOps_HomeWork Sample Demo1111111111111111111111111111
+            DevOps_Intellisurf Sample Demo
         </h1>
         <table class="table">
-            <caption>Contact List New</caption>
+            <caption>Adapter Manager</caption>
             <thead>
             <tr>
                 <th>#</th>
-                <th>Companys</th>
-                <th>Phone</th>
+                <th>Adapter Name</th>
+                <th>Adapter Action</th>
                 <th>Action</th>
             </tr>
 
@@ -80,11 +80,11 @@ $contacts = $db->all();
         <div class="text-left">
             <form method="post">
                 <div class="form-group">
-                    <label for="name">CompanyName</label>
+                    <label for="name">Adapter Name</label>
                     <input type="text" name="name" class="form-control" id="name" placeholder="Name">
                 </div>
                 <div class="form-group">
-                    <label for="phone">CompanyPhone</label>
+                    <label for="phone">Adapter Action</label>
                     <input type="text" name="phone" class="form-control" id="phone" placeholder="phone">
                 </div>
                 <button type="submit" class="btn btn-success">Create</button>

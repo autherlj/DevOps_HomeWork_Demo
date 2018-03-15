@@ -48,7 +48,7 @@ $contacts = $db->all();
 <div class="container">
     <div class="content">
         <h1>
-            DevOps_Intellisurf Sample Demo
+            DevOps_Intellisurf
         </h1>
         <table class="table">
             <caption>Adapter Manager</caption>
@@ -67,7 +67,7 @@ $contacts = $db->all();
                 <tr>
                     <th scope="row"> <?php echo $index + 1 ?></th>
                     <td><?php echo $contact['name'] ?></td>
-                    <td><?php echo $contact['phone'] ?></td>
+                    <td><?php echo $contact['status'] ?></td>
                     <td>
                         <a href="index.php?delete=<?php echo $contact['id'] ?>">Delete</a>
                     </td>

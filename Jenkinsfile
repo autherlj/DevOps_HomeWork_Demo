@@ -19,7 +19,7 @@ node{
            }
            stage('DeploytoK8s'){
                 sh "sed 's#autherlj/mytest#'$BUILDIMG'#' php-mysql.yaml | kubectl apply -f -"
-                sh "kubectl rollout status deployment/php-mysql -n cicd"
+                
            }
       
        }catch(error)

@@ -5,7 +5,7 @@
 ## 开始体验
 
 > 假设您现在是一个开发人员，您的代码在git上管理，地址为[https://github.com/autherlj/DevOps_HomeWork_Demo]
-> 现在这个代码已经上线您可以通过 [https://centos-testk8s-1.southeastasia.cloudapp.azure.com:20443/cicd-demo-web/index.php] 访问，设想一下这个就是我们的WEB产品。
+> 现在这个代码已经上线您可以通过 [https://autherlj.vip:20443/cicd-demo-web/index.php] 访问，设想一下这个就是我们的WEB产品。
 
 ## 下载代码
 
@@ -25,7 +25,7 @@ git push         #提交到远程仓库这里push会提交到我们git仓库
 ```
 # 观察效果
 
->pull请求通过后，现在您什么都不用做，等待3~5min如果不出意外，你的改动就已经产生影响,查看[https://centos-testk8s-1.southeastasia.cloudapp.azure.com:20443/cicd-demo-web/index.php]是否发生变化
+>pull请求通过后，现在您什么都不用做，等待3~5min，你的改动就已经产生影响,查看[https://autherlj.vip:20443/cicd-demo-web/index.php]是否发生变化
 
 
 # 总结

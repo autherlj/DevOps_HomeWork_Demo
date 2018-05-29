@@ -1,4 +1,4 @@
-node{
+node('jenkins-slave') {
               currentBuild.result = "SUCCESS"  
     try{
            stage ('CheckoutCode'){

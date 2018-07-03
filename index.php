@@ -55,7 +55,7 @@ $contacts = $db->all();
             <thead>
             <tr>
                 <th>#</th>
-                <th>Adapter Name</th>
+                <th>Adapter Name1</th>
                 <th>Adapter Action</th>
                 <th>Action</th>
             </tr>

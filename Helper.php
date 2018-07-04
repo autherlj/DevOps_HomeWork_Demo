@@ -1,7 +1,7 @@
 <?php
 
 /**
- * 获取环境变量
+ * 获取环境变量11
  * @param $key
  * @param null $default
  * @return null|string

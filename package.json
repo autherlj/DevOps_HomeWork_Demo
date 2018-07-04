@@ -25,6 +25,7 @@
     },
     "ghooks": {
       "pre-commit": "npm run lint && npm run test && npm run check-coverage"
+      "commit-msg": "./node_modules/validate-commit-msg/index.js"
     }
   },
   "homepage": "https://github.com/commitizen/cz-cli",

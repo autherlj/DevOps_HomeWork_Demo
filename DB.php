@@ -18,7 +18,7 @@ class DB
 
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            // 检测数据库是否存在表
+            // 检测数据库是否存在表111
             $isInstall = $this->pdo->query("SHOW TABLES like 'contacts';")
                 ->rowCount();
 

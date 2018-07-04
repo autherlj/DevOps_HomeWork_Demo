@@ -51,7 +51,7 @@ $contacts = $db->all();
             DevOps_Intellisurf
         </h1>
         <table class="table">
-            <caption>Adapter Manager</caption>
+            <caption>Adapter Mdsadaanager</caption>
             <thead>
             <tr>
                 <th>#</th>
